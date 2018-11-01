@@ -198,9 +198,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
             
             标签
           </a>
@@ -208,9 +208,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
             
             分类
           </a>
@@ -223,6 +223,36 @@
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
           </a>
         </li>
       
@@ -259,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/01/Markdown/开篇/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/01/Markdown/task13/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Keer">
@@ -278,7 +308,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/01/Markdown/开篇/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2018/10/01/Markdown/task13/" itemprop="url">百度前端技术学院任务系列</a></h1>
         
 
         <div class="post-meta">
@@ -290,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-01T17:40:37+08:00">
-                2018-11-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-01T20:46:25+08:00">
+                2018-10-01
               </time>
             
 
@@ -300,6 +330,226 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/Testing/" itemprop="url" rel="index">
+                    <span itemprop="name">Testing</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="任务十三"><a href="#任务十三" class="headerlink" title="任务十三"></a>任务十三</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><ul>
+<li>参考以下示例代码，补充其中的JavaScript功能，完成一个JavaScript代码的编写</li>
+<li>本任务完成的功能为：用户可以在输入框中输入任何内容，点击“确认填写”按钮后，用户输入的内容会显示在“您输入的值是”文字的右边<br><br><br><br><img src="https://i.imgur.com/8KnxA7r.png" alt=""><br><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2></li>
+<li>给按钮绑定事件处理函数handler</li>
+<li>在事件处理函数中，将获取到的输入框的值替换在输出框中</li>
+<li><p>可以给回车键也绑定该处理函数</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>  var btn = document.getElementById(‘button’);</p>
+<blockquote>
+<p>//给按钮绑定的函数<br>  var handler = function () {</p>
+<pre><code>//获取输入值
+var num = document.getElementById(&apos;aqi-input&apos;).value;
+//将输出框的值替换为Num
+document.getElementById(&apos;aqi-display&apos;).textContent = num;
+</code></pre><p>  };</p>
+</blockquote>
+<blockquote>
+<p>//确认按钮绑定函数handler<br>  btn.addEventListener(‘click’, handler, false);</p>
+</blockquote>
+<blockquote>
+<p>//回车键绑定函数handler<br>  document.getElementById(‘aqi-input’).onkeyup = function(event) {</p>
+<pre><code>if (event.keyCode === 13) {
+    handler();
+}
+</code></pre><p>  };</p>
+</blockquote>
+<h2 id="知识回顾"><a href="#知识回顾" class="headerlink" title="知识回顾"></a>知识回顾</h2><p><strong>1.JS有三种方法，可以为事件绑定监听函数<br></strong></p>
+</li>
+</ul>
+<ul>
+<li>HTML的on-属性<br></li>
+<li>元素节点的事件属性<br></li>
+<li>EventTarget.addEventListener( )<br><br><strong>三种方法的区别：</strong><br><br>第一种:HTML的on-属性，违反了HTML与JS代码相分离的原则，将两者写在一起，不利于代码分工，不推荐使用<br><br>第二种：元素节点的事件属性的缺点在于同一个事件只能定义一个监听函数，也就是说，如果定义两次onclick属性，后一次定义会覆盖前一次。不推荐使用。<br><br>第三种：EventTarget.addEventListener是推荐的指定监听函数的方法，优点如下：<br><ul>
+<li>同一个事件可以添加多个监听函数<br></li>
+<li>能够指定在哪个阶段（捕获还是冒泡阶段）触发监听函数。<br></li>
+<li>除了这个对象，其他对象也有这个接口，它等于是整个JS的同一监听函数接口。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>2. innerHTML与textContent</strong></p>
+<ul>
+<li><p>Element.innerHTML属性返回一个字符串，等同于该元素所包含的所有HTML代码。该属性可读写，常用来设置某个节点的内容。如果将innerHTML属性设为空，等于删除所有它包含的所有节点。读取属性值的时候，如果文本节点包含&amp;  ，小于号，和大于号，innerHTML属性会将它们转为实体形式&smp;，&amp;lt；，&amp;gt；.如果想得到原文，建议使用element.textContent属性。<br></p>
+</li>
+<li><p>textContent属性返回当前节点和它的所有节点的文本内容。该属性会自动忽略当前节点内部的HTML标签，返回所有文本内容。该属性可读写，设置该属性的值，会用一个新的文本节点，替换所有原来的子节点。它还有一个好处，就是自动对HTML标签转义。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/01/Markdown/开篇/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Keer">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/01/Markdown/开篇/" itemprop="url">开篇</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-01T20:46:25+08:00">
+                2018-08-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -373,184 +623,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/01/Markdown/task13/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Keer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/01/Markdown/task13/" itemprop="url">Test for Hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-01T20:46:25+08:00">
-                2018-10-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Diary/" itemprop="url" rel="index">
-                    <span itemprop="name">Diary</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="任务十三"><a href="#任务十三" class="headerlink" title="任务十三"></a>任务十三</h1><h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><ul>
-<li>参考以下示例代码，补充其中的JavaScript功能，完成一个JavaScript代码的编写</li>
-</ul>
-<ul>
-<li>本任务完成的功能为：用户可以在输入框中输入任何内容，点击“确认填写”按钮后，用户输入的内容会显示在“您输入的值是”文字的右边<br><img src="https://i.imgur.com/8KnxA7r.png" alt=""><br>##思路##</li>
-<li>给按钮绑定事件处理函数handler</li>
-<li>在事件处理函数中，将获取到的输入框的值替换在输出框中</li>
-<li><p>可以给回车键也绑定该处理函数<br>##代码实现##<br>  var btn = document.getElementById(‘button’);<br>  //给按钮绑定的函数<br>  var handler = function () {</p>
-<pre><code>//获取输入值
-var num = document.getElementById(&apos;aqi-input&apos;).value;
-//将输出框的值替换为Num
-document.getElementById(&apos;aqi-display&apos;).textContent = num;
-</code></pre><p>  };</p>
-<p>  //确认按钮绑定函数handler<br>  btn.addEventListener(‘click’, handler, false);</p>
-<p>  //回车键绑定函数handler<br>  document.getElementById(‘aqi-input’).onkeyup = function(event) {</p>
-<pre><code>if (event.keyCode === 13) {
-    handler();
-}
-</code></pre><p>  };<br>##知识回顾<br><strong>1.JS有三种方法，可以为事件绑定监听函数<br></strong></p>
-</li>
-</ul>
-<ul>
-<li>HTML的on-属性<br></li>
-<li>元素节点的事件属性<br></li>
-<li>EventTarget.addEventListener( )<br><br><strong>三种方法的区别：</strong><br><br>第一种:HTML的on-属性，违反了HTML与JS代码相分离的原则，将两者写在一起，不利于代码分工，不推荐使用<br><br>第二种：元素节点的事件属性的缺点在于同一个事件只能定义一个监听函数，也就是说，如果定义两次onclick属性，后一次定义会覆盖前一次。不推荐使用。<br><br>第三种：EventTarget.addEventListener是推荐的指定监听函数的方法，优点如下：<br></li>
-</ul>
-<pre><code>- 同一个事件可以添加多个监听函数&lt;br&gt;
-- 能够指定在哪个阶段（捕获还是冒泡阶段）触发监听函数。&lt;br&gt;
-- 除了这个对象，其他对象也有这个接口，它等于是整个JS的同一监听函数接口。
-</code></pre><hr>
-<p><strong>2. innerHTML与textContent</strong></p>
-<ul>
-<li><p>Element.innerHTML属性返回一个字符串，等同于该元素所包含的所有HTML代码。该属性可读写，常用来设置某个节点的内容。如果将innerHTML属性设为空，等于删除所有它包含的所有节点。读取属性值的时候，如果文本节点包含&amp;  ，小于号，和大于号，innerHTML属性会将它们转为实体形式&smp;，&amp;lt；，&amp;gt；.如果想得到原文，建议使用element.textContent属性。<br></p>
-</li>
-<li><p>textContent属性返回当前节点和它的所有节点的文本内容。该属性会自动忽略当前节点内部的HTML标签，返回所有文本内容。该属性可读写，设置该属性的值，会用一个新的文本节点，替换所有原来的子节点。它还有一个好处，就是自动对HTML标签转义。</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -586,6 +658,8 @@ document.getElementById(&apos;aqi-display&apos;).textContent = num;
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Keer">
+            
               <p class="site-author-name" itemprop="name">Keer</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -607,10 +681,10 @@ document.getElementById(&apos;aqi-display&apos;).textContent = num;
               
               
               <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">1</span>
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -619,7 +693,7 @@ document.getElementById(&apos;aqi-display&apos;).textContent = num;
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -629,6 +703,22 @@ document.getElementById(&apos;aqi-display&apos;).textContent = num;
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Keer-W" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:keer964@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
